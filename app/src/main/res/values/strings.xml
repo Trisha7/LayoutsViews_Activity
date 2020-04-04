@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">LayoutsViews_Activity</string>
+    <string name="content_Folder">This displays the file folder</string>
+    <string name="Mother_board_info">This shows the steps left to become a graduate.</string>
+    <string name="Users_info">This displays other users available to chat with.</string>
+    <string name="user_photo">Shows the user photo.</string>
+    <string name="progress_badge">It displays my progress badge</string>
+    <string name="user_targets">This shows my targets</string>
+    <string name="country_flag">This displays my country flag</string>
+    <string name="user_name">Idikwu A Patricia</string>
+    <string name="slack_id">Trisha</string>
+    <string name="slack_email">idikwu2patricia@gmail.com</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="likes">Likes</string>
+    <string name="dislikes">Dislikes</string>
+    <string name="for_likes">Symbol for likes</string>
+    <string name="for_dislikes">symbol for dislikes</string>
+    <string name="for_hobbies">symbol for hobbies</string>
+    <string name="envy_dislike">Envy</string>
+    <string name="site_seeing_hobby">Site-seeing</string>
+    <string name="food_like">Food</string>
+    <string name="travel_like">Travel</string>
+    <string name="laziness_dislike">Laziness</string>
+    <string name="play_games_hobby">Play Games</string>
+    <string name="learning_like">Learning</string>
+    <string name="dirtiness_dislike">Dirtiness</string>
+    <string name="swimming_hobby">Swimming</string>
+</resources>

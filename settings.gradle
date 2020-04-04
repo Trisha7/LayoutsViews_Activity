@@ -1,0 +1,2 @@
+rootProject.name='LayoutsViews_Activity'
+include ':app'

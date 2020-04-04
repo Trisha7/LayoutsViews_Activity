@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Top_Layout"
+        android:layout_width="416dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="3dp"
+        android:background="#EEF3C4"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/Mid_Layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_viewFlag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:contentDescription="@string/country_flag"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/flag" />
+
+        <ImageView
+            android:id="@+id/image_viewTarget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/user_targets"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/target" />
+
+        <ImageView
+            android:id="@+id/image_viewBadge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/progress_badge"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/medal" />
+
+        <ImageView
+            android:id="@+id/image_viewPhoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/user_photo"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/my_photo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Mid_Layout"
+        android:layout_width="418dp"
+        android:layout_height="290dp"
+        android:background="#F4EFDE"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/Scroll_viewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Top_Layout">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="296dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center|end"
+            android:fontFamily="@font/aldrich"
+            android:gravity="bottom|center|start|top"
+            android:lineSpacingExtra="12sp"
+            android:text="@string/user_name"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textSlackId"
+            android:layout_width="179dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center|start|center_horizontal"
+            android:lineSpacingExtra="12sp"
+            android:text="@string/slack_id"
+            android:textAllCaps="false"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="296dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center|end"
+            android:fontFamily="@font/aldrich"
+            android:gravity="center|start|center_horizontal"
+            android:lineSpacingExtra="10sp"
+            android:text="@string/slack_email"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Scroll_viewer"
+        android:layout_width="417dp"
+        android:layout_height="258dp"
+        android:layout_marginTop="184dp"
+        android:background="#EEF3C4"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textLikes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/learning_like"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.402"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.143" />
+
+            <TextView
+                android:id="@+id/textDislike1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:text="@string/dirtiness_dislike"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textHobby1"
+                app:layout_constraintEnd_toEndOf="@+id/textLikes1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textLikes1" />
+
+            <TextView
+                android:id="@+id/textHobby1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:layout_marginRight="44dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/swimming_hobby"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textDislike1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textDislike1" />
+
+            <ImageView
+                android:id="@+id/imageViewLikes"
+                android:layout_width="75dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/for_likes"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewDislikes"
+                app:layout_constraintEnd_toStartOf="@+id/textLikes1"
+                app:layout_constraintHorizontal_bias="0.19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/like" />
+
+            <ImageView
+                android:id="@+id/imageViewDislikes"
+                android:layout_width="75dp"
+                android:layout_height="92dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/for_dislikes"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewHobbies"
+                app:layout_constraintEnd_toStartOf="@+id/textDislike1"
+                app:layout_constraintHorizontal_bias="0.422"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/dislike" />
+
+            <ImageView
+                android:id="@+id/imageViewHobbies"
+                android:layout_width="75dp"
+                android:layout_height="93dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/for_hobbies"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textHobby1"
+                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/hearts" />
+
+            <TextView
+                android:id="@+id/textLike2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="68dp"
+                android:layout_marginRight="68dp"
+                android:text="@string/food_like"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textDislike2"
+                app:layout_constraintEnd_toStartOf="@+id/textlike3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.33" />
+
+            <TextView
+                android:id="@+id/textDislike2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:text="@string/envy_dislike"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textHobby2"
+                app:layout_constraintEnd_toEndOf="@+id/textLike2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textLike2" />
+
+            <TextView
+                android:id="@+id/textHobby2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/site_seeing_hobby"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textDislike2"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="@+id/textDislike2" />
+
+            <TextView
+                android:id="@+id/textlike3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:text="@string/travel_like"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textDislike3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.328" />
+
+            <TextView
+                android:id="@+id/textDislike3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="100dp"
+                android:text="@string/laziness_dislike"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textHobby3"
+                app:layout_constraintEnd_toEndOf="@+id/textlike3"
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toStartOf="@+id/textlike3" />
+
+            <TextView
+                android:id="@+id/textHobby3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:text="@string/play_games_hobby"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textDislike3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textDislike3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/Bottom_layout"
+        android:layout_width="415dp"
+        android:layout_height="116dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Scroll_viewer">
+
+        <ImageView
+            android:id="@+id/image_viewFolders"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_Folder"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/folder" />
+
+        <ImageView
+            android:id="@+id/image_viewMBoard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/Mother_board_info"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/mortarboard"></ImageView>
+
+        <ImageView
+            android:id="@+id/image_viewUsers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/Users_info"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/user" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
